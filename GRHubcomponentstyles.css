@@ -1,0 +1,376 @@
+/* Basic styling */
+body {
+    min-height: 100vh;
+    line-height: 1.6;
+    /* background-image: url(Images/rm309-adj-03.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: rgb(52, 50, 50);
+    color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Styling for the logo */
+.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.logo img {
+    width: 100%; 
+    max-height: 50px;
+}
+
+.logo::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: opacity 0.3s; 
+    opacity: 0; 
+    border-radius: 50%; 
+}
+
+.logo:hover::before {
+    opacity: 1; 
+}
+
+
+
+h1 {
+    font-family: 'Arial', sans-serif; 
+    color: #04d5fa;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    letter-spacing: 1px; 
+}
+
+.displayImage{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    border-radius: 8px;
+    text-align: center;
+    /* opacity: 1; */
+}
+
+.bookNowButton{
+    font: 1em sans-serif;
+    background-color: #b7ebf4;
+    color: black;
+    position: absolute;
+    top: 93%;
+    left: 7%;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s;
+    width: 8%;
+}
+.bookNowButton:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
+}
+
+
+.navigation {
+    color: whitesmoke;
+    
+
+}
+
+.navigation ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navigation ul {
+    list-style-type: none;
+
+}
+.navigation li {
+    height: 50px;
+}
+
+
+
+.navigation a {
+    height: 100%;
+    margin-left : 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    padding: 0 20px;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    color: whitesmoke;
+    transition: all .55s ease;
+}
+.navigation a:hover {
+    border-bottom: white;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+
+
+.navigation ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+
+.navigation ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation ul li a:hover {
+    text-decoration: underline;
+    border-radius: 20px;
+}
+
+
+.navigation ul li svg {
+    margin-right: 5px; 
+}
+
+
+/* Styling for the search bar */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
+}
+
+.search-bar {
+    margin-right: auto;
+}
+
+
+/* Styling for the booking section */
+
+.bookingForm {
+    display: none;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bookingForm label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.bookingForm input[type="text"],
+.bookingForm input[type="tel"],
+.bookingForm input[type="email"],
+.bookingForm textarea,
+.bookingForm input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bookingForm button {
+    width: auto;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.bookingForm button:hover {
+    background-color: #0056b3;
+}
+
+.Customization,
+.Pickup.Address,
+.Pickup.Time {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+}
+
+
+
+
+/* Services Section Styles */
+.services-section {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.services-section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/*Footer Styles */
+.footer-container {
+    position: fixed;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 15px; 
+    
+}
+
+
+/* Styling for the follow us section */
+.social-icon {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    background-color: none;
+    color: #fff;
+    display: flex;
+    align-items: center; 
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.social-icon .follow-text {
+    color: whitesmoke;
+    margin-right: 15px; 
+    font-size: 25px; 
+}
+.social-icon ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icon ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Adjust Facebook icon color */
+.social-icon ul li:nth-child(1) a {
+    color: skyblue; 
+}
+
+/* Adjust Instagram icon color */
+.social-icon ul li:nth-child(2) a {
+    color: #ff3f80; 
+}
+
+.social-icon ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icon ul li a:hover {
+    color: #007bff;
+}
+
+
+
+
+/* Styles for Company Details Section */
+#companyDetails {
+    padding: 50px 20px; 
+    background-color: none; 
+    text-align: center;
+}
+
+#companyDetails h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#companyDetails p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: justify; 
+    margin: 0 auto 20px; 
+    padding: 0 20px; 
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+}
+
+
+#companyDetails h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+

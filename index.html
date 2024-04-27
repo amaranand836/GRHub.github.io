@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gloves Repairing Hub</title>
+    <link rel="stylesheet" href="GRHubcomponentstyles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a href="#"><img src="https://i.ibb.co/6PpDPVk/IMG-20240319-WA0012.jpg" class="logo" alt=""></a>
+            <h1>Gloves Repairing Hub</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#" onclick="goToHomePage()">Home</a></li>
+                    <li><a href="#" onclick="showCompanyDetails()">Our Services</a></li>
+                    <li><a href="#" onclick="showBooking()">Booking</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li>
+                        <div class="search-form">
+                            <input type="text" id="search" name="search" placeholder="Search...">
+                            <button type="submit">Search</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div style="display: flex;">
+        <img src="https://i.ibb.co/v1jDCN8/IMG-20240319-WA0014.jpg" class="displayImage">
+        <button class="bookNowButton" onclick="book()">Book Now</button>
+    </div>
+    
+
+    <!-- Company Details Section -->
+    <section id="companyDetails" >
+        <div class="container">
+            <h2>Welcome to Gloves Repairing Hub!</h2>
+            <p>At Gloves Repairing Hub, we specialize in reviving and restoring batting gloves to their optimal condition. Our expert craftsmen offer a range of services including simple repairs, patching, and leather restoration. We take pride in our workmanship and ensure that each pair of gloves receives meticulous care and attention. Trust us to bring new life to your beloved gloves so you can focus on playing your best on the field. Contact us today and experience our commitment to quality and customer satisfaction!</p>
+        </div>
+    </section>
+
+    <!-- Booking Form - Part 1: Customization -->
+    <form class="bookingForm" id="customizationForm">
+        <div class="Customization">
+            <h3>What type of Customization do you need for your gloves?</h3>
+            <label for="repairType">Select Customization Type:</label>
+            <select id="repairType" name="repairType">
+                <option value="Simple Repair">Simple Repair</option>
+                <option value="Patching">Patching</option>
+                <option value="Leather Restoration">Leather Restoration</option>
+            </select>
+            <label for="customization">Add Customization Preferences (optional):</label>
+            <textarea id="customization" name="customization"></textarea>
+            <button type="button" onclick="closeBooking()">Close</button>
+            <button type="button" onclick="showPickupAddress()">Next</button>
+        </div>
+    </form>
+
+
+    <!-- Booking Form - Part 2: Pickup Address -->
+    <form class="bookingForm" id="pickupAddressForm" style="display: none;">
+    <div class="Pickup Address">
+    <h3>Add Pickup Address</h3>
+    <!-- Pickup address fields -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phoneNumber">Phone Number:</label><br>
+    <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+
+    <label for="altPhoneNumber">Alternate Phone Number (Optional):</label><br>
+    <input type="tel" id="altPhoneNumber" name="altPhoneNumber"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="houseNumber">House Number, Building Name,etc.:</label><br>
+    <input type="text" id="houseNumber" name="houseNumber" required><br>
+    <label for="locality">Locality/Street Name (Optional):</label><br>
+    <input type="text" id="locality" name="locality"><br>
+    <label for="landmark">Landmark (Optional):</label><br>
+    <input type="text" id="landmark" name="landmark"><br>
+    <label for="pincode">Pincode:</label><br>
+    <input type="text" id="pincode" name="pincode" required><br>
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city" required><br>
+    <label for="state">State:</label><br>
+    <input type="text" id="state" name="state" required><br>
+    <label for="country">Country:</label><br>
+    <input type="text" id="country" name="country" required><br>
+
+    <button type="button" onclick="closeBooking()">Close</button>
+    <button type="button" onclick="showCustomization()">Back</button>
+    <button type="button" onclick="showPickupTime()">Pick Your Time</button>
+    </div>
+    </form>
+
+
+    <!-- Booking Form - Part 3: Pickup Time -->
+    <form class="bookingForm" id="pickupTimeForm" style="display: none;">
+        <div class="Pickup Time">
+            <h3>Pickup Preferred Date/Time</h3>
+            <label for="dateTime">Pickup Preferred Date/Time:</label>
+            <input type="datetime-local" id="dateTime" name="dateTime" required>
+            <button type="button" onclick="closeBooking()">Close</button>
+            <button type="button" onclick="showPickupAddress()">Back</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+    <div class="footer-container">
+        <p class="footer-text">&copy; 2024 Gloves Repairing Hub. All rights reserved.</p>
+        <div class="social-icon">
+            <h2> <span class="follow-text">Follow us :</span></h2>
+            <ul class="flex">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script src="GRHubcomponentscript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
