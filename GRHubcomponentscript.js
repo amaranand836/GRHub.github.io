@@ -93,7 +93,7 @@ function showBookNowButton() {
 }
 
 function goToHomePage() {
-    window.location.href = 'GRHubcomponentscript.html'; 
+    window.location.href = './index.html'; 
 }
 
 function book() {
